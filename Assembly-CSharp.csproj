@@ -40,6 +40,7 @@
      <Compile Include="Assets\Script\CustomerSpawner.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
      <Compile Include="Assets\Script\SearchPart2.cs" />
+     <Compile Include="Assets\Script\capacityManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/tore/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
