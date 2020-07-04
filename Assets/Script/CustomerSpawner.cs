@@ -5,8 +5,8 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     public GameObject customerPrefab;
-    public float centerPoint;
-    public float spawnRadius;
+    public Vector3 centerPoint;
+    public Vector3 spawnSize;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class CustomerSpawner : MonoBehaviour
     }
 
     public void SpawnFood(){
-        Vector3 position = new Vector3(Random.Range(-spawnRadius/2, spawnRadius/2), 1, Random.Range(-spawnRadius/2, spawnRadius/2));
+        Vector3 position = centerPoint + new Vector3(Random.Range(-spawnSize.x/2, spawnSize.x/2), 1, Random.Range(-spawnSize.z/2, spawnSize.z/2));
 
         Instantiate(customerPrefab, position, Quaternion.identity);
     }
