@@ -10,17 +10,17 @@ public class CustomerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("spawnCustomer", 0, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnFood();
+//        spawnCustomer();
     }
 
-    public void SpawnFood(){
-        Vector3 position = centerPoint + new Vector3(Random.Range(-spawnSize.x/2, spawnSize.x/2), 1, Random.Range(-spawnSize.z/2, spawnSize.z/2));
+    public void spawnCustomer(){
+        Vector3 position = centerPoint + new Vector3(Random.Range(-spawnSize.x/2, spawnSize.x/2), 0, Random.Range(-spawnSize.z/2, spawnSize.z/2));
 
         Instantiate(customerPrefab, position, Quaternion.identity);
     }
