@@ -6,22 +6,21 @@ public class SearchPart2 : MonoBehaviour
 {
     public Vector3 target;
     public float customerSpeed;
-    bool hasReached = false;
+//    bool hasReached = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        GameObject dock = GameObject.Find("DockingStation");
+        BoatDockCollider BdCollider = dock.GetComponent<BoatDockCollider>();
         // makes the customers go towards a certain target point
-        if(hasReached == false){
+        if(BdCollider.boatInDock == true){
             transform.position = Vector3.MoveTowards(transform.position, target, customerSpeed);
-        }
-        if(transform.position == target){
-            hasReached = true;
         }
     }
 }
