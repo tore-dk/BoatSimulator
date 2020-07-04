@@ -18,8 +18,12 @@ public class SearchPart2 : MonoBehaviour
     {
         GameObject dock = GameObject.Find("DockingStation");
         BoatDockCollider BdCollider = dock.GetComponent<BoatDockCollider>();
+
+        GameObject Player = GameObject.Find("Player");
+        capacityManager capacityScript = Player.GetComponent<capacityManager>(); 
+
         // makes the customers go towards a certain target point
-        if(BdCollider.boatInDock == true){
+        if(BdCollider.boatInDock == true && capacityScript.customersOnBoat < capacityScript.boatCapacity){
             transform.position = Vector3.MoveTowards(transform.position, target, customerSpeed);
         }
     }
