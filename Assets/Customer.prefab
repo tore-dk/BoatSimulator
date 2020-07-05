@@ -127,5 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: -18, y: 4.5, z: -75}
-  customerSpeed: 0.2
+  customerSpeed: 0.5
   doneWalking: 0

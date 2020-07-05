@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\Script\BoatDockCollider.cs" />
+     <Compile Include="Assets\Script\CameraMovement.cs" />
      <Compile Include="Assets\Script\CustomerSpawner.cs" />
      <Compile Include="Assets\Script\DropOffCollider.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
