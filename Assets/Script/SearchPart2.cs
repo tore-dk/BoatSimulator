@@ -6,7 +6,7 @@ public class SearchPart2 : MonoBehaviour
 {
     public Vector3 target;
     public float customerSpeed;
-//    bool hasReached = false;
+    public bool doneWalking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,11 @@ public class SearchPart2 : MonoBehaviour
 
         GameObject Player = GameObject.Find("Player");
         capacityManager capacityScript = Player.GetComponent<capacityManager>(); 
+        DropOffCollider dropOff = Player.GetComponent<DropOffCollider>();
 
-        target = Player.transform.position + new Vector3(-10, 2, 0);
+        target = Player.transform.position + new Vector3(0, 2, 0);
         // makes the customers go towards a certain target point
-        if(BdCollider.boatInDock == true && capacityScript.customersOnBoat < capacityScript.boatCapacity){
+        if(BdCollider.boatInDock == true && capacityScript.customersOnBoat < capacityScript.boatCapacity && doneWalking == false){
             transform.position = Vector3.MoveTowards(transform.position, target, customerSpeed);
         }
     }

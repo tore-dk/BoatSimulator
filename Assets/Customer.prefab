@@ -97,7 +97,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4209077104583785890
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: -18, y: 4.5, z: -75}
   customerSpeed: 0.2
+  doneWalking: 0

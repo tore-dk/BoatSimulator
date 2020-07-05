@@ -38,8 +38,9 @@
   <ItemGroup>
      <Compile Include="Assets\Script\BoatDockCollider.cs" />
      <Compile Include="Assets\Script\CustomerSpawner.cs" />
-     <Compile Include="Assets\Script\DropOffColiider.cs" />
+     <Compile Include="Assets\Script\DropOffCollider.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
+     <Compile Include="Assets\Script\SearchFinish.cs" />
      <Compile Include="Assets\Script\SearchPart2.cs" />
      <Compile Include="Assets\Script\capacityManager.cs" />
     <Reference Include="UnityEngine">
