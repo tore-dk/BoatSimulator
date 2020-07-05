@@ -9,7 +9,6 @@ public class capacityManager : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
             if(collider.gameObject.tag == "Customer" && boatCapacity > customersOnBoat){
-                Debug.Log("Customer fundet!");
                 Destroy(collider.gameObject);
                 customersOnBoat++;
             }

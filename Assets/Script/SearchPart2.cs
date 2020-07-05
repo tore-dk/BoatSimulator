@@ -22,7 +22,7 @@ public class SearchPart2 : MonoBehaviour
         GameObject Player = GameObject.Find("Player");
         capacityManager capacityScript = Player.GetComponent<capacityManager>(); 
 
-        target = Player.transform.position + new Vector3(-10, 0, 0);
+        target = Player.transform.position + new Vector3(-10, 2, 0);
         // makes the customers go towards a certain target point
         if(BdCollider.boatInDock == true && capacityScript.customersOnBoat < capacityScript.boatCapacity){
             transform.position = Vector3.MoveTowards(transform.position, target, customerSpeed);
