@@ -5,23 +5,36 @@ using UnityEngine.UI;
 
 public class CustomerTracker : MonoBehaviour
 {
+    GameObject maximumSpace;
+    Text maximumSpaceText;
     GameObject onBoatDisplay;
     Text onBoatDisplayText;
     public capacityManager capacityMGer;
     string onBoat;
-    string originalText;
+    string originCustomersOnBoatText;
+    string originMaximumSpaceText;
+    string totalSpace;
+
     void Start()
     {
-        // modify text
+        // get customers on boat text
         onBoatDisplay = GameObject.Find("CustomersOnBoatText");
         onBoatDisplayText = onBoatDisplay.GetComponent<Text>();
-        originalText = onBoatDisplayText.text;
+        originCustomersOnBoatText = onBoatDisplayText.text;
+        // get total space available text
+        maximumSpace = GameObject.Find("MaxCapacityText");
+        maximumSpaceText = maximumSpace.GetComponent<Text>();
+        originMaximumSpaceText = maximumSpaceText.text;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // update sutomers on boat text
         onBoat = (capacityMGer.customersOnBoat).ToString();
-        onBoatDisplayText.text = originalText + onBoat;
+        onBoatDisplayText.text = originCustomersOnBoatText + onBoat;
+        // update total space available text
+        totalSpace = (capacityMGer.boatCapacity).ToString();
+        maximumSpaceText.text = originMaximumSpaceText + totalSpace;
     }
 }
