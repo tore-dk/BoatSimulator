@@ -8,7 +8,17 @@ public class DropOffCollider : MonoBehaviour
     private bool inDropOff = false;
     public GameObject servedPrefab;
     Vector3 offset = new Vector3(0, 2, 0);
+    List<int> customerPointsList;
+    GameObject ScoreManager;
+    public float points;
     void Start(){
+        ScoreManager = GameObject.Find("ScoreManager");
+        //get total points
+        points = ScoreManager.GetComponent<CustomerTracker>().totalPoints;
+    }
+    void Update(){
+        // get customer points
+        customerPointsList = GetComponent<capacityManager>().customerPoints;
     }
     void OnTriggerEnter(Collider collider){
         if(collider.name == "EndDock"){
@@ -26,8 +36,11 @@ public class DropOffCollider : MonoBehaviour
     void ExitBoat(){
         capacityManager cpManager = gameObject.GetComponent<capacityManager>();
         if(cpManager.customersOnBoat > 0){
-//            Vector3 dropOffPos = new Vector3(1, 10, 1);
             Instantiate(servedPrefab, transform.position + offset, Quaternion.identity);
+            // add points and remove object from list
+            points += customerPointsList[0];
+            customerPointsList.RemoveAt(0);
+            Debug.Log(points);
             cpManager.customersOnBoat--;
         } else{
             CancelInvoke("ExitBoat");

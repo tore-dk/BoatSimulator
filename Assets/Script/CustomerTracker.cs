@@ -9,11 +9,17 @@ public class CustomerTracker : MonoBehaviour
     Text maximumSpaceText;
     GameObject onBoatDisplay;
     Text onBoatDisplayText;
+    GameObject totalPointsObject;
+    Text totalPointsText; 
+    public DropOffCollider dropOffCollider;
     public capacityManager capacityMGer;
     string onBoat;
     string originCustomersOnBoatText;
     string originMaximumSpaceText;
+    string originTotalPointsText;
     string totalSpace;
+    public float totalPoints;
+    string points;
 
     void Start()
     {
@@ -25,6 +31,10 @@ public class CustomerTracker : MonoBehaviour
         maximumSpace = GameObject.Find("MaxCapacityText");
         maximumSpaceText = maximumSpace.GetComponent<Text>();
         originMaximumSpaceText = maximumSpaceText.text;
+        // get total points text
+        totalPointsObject = GameObject.Find("TotalPointsText");
+        totalPointsText = totalPointsObject.GetComponent<Text>();
+        originTotalPointsText = totalPointsText.text;
     }
 
     // Update is called once per frame
@@ -36,5 +46,8 @@ public class CustomerTracker : MonoBehaviour
         // update total space available text
         totalSpace = (capacityMGer.boatCapacity).ToString();
         maximumSpaceText.text = originMaximumSpaceText + totalSpace;
+        // update and recieve total points
+        points = (dropOffCollider.points).ToString();
+        totalPointsText.text = originTotalPointsText + points;
     }
 }
