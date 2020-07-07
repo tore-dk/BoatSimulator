@@ -40,7 +40,6 @@ public class DropOffCollider : MonoBehaviour
             // add points and remove object from list
             points += customerPointsList[0];
             customerPointsList.RemoveAt(0);
-            Debug.Log(points);
             cpManager.customersOnBoat--;
         } else{
             CancelInvoke("ExitBoat");

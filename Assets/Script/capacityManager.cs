@@ -10,7 +10,11 @@ public class capacityManager : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
             if(collider.gameObject.tag == "Customer" && boatCapacity > customersOnBoat){
-                customerPoints.Add(int.Parse(collider.name));
+                if(collider.name == "100"){
+                    customerPoints.Add(500);
+                } else{
+                    customerPoints.Add(10);
+                }
                 Destroy(collider.gameObject);
                 customersOnBoat++;
             }
