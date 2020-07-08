@@ -1034,6 +1034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitSpeed: 1
   servedPrefab: {fileID: 7442547911263425772, guid: 80a8cff3324ea026f901b6a933ba359d, type: 3}
+  pointsText: {fileID: 5814098451607983019, guid: 49b3e15d7769f5a2ea21f95b2022df2c, type: 3}
   points: 0
 --- !u!1 &1096619147
 GameObject:

@@ -40,11 +40,13 @@
      <Compile Include="Assets\Script\CameraMovement.cs" />
      <Compile Include="Assets\Script\CustomerSpawner.cs" />
      <Compile Include="Assets\Script\CustomerTracker.cs" />
+     <Compile Include="Assets\Script\DestroyTime.cs" />
      <Compile Include="Assets\Script\DropOffCollider.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
      <Compile Include="Assets\Script\SearchFinish.cs" />
      <Compile Include="Assets\Script\SearchPart2.cs" />
      <Compile Include="Assets\Script\capacityManager.cs" />
+     <Compile Include="Assets\Script\faceCamera.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
