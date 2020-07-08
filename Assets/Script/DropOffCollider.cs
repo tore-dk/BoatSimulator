@@ -45,11 +45,10 @@ public class DropOffCollider : MonoBehaviour
         capacityManager cpManager = gameObject.GetComponent<capacityManager>();
         
         if(cpManager.customersOnBoat > 0){
-            // make customer golden if it is worth that much
             tempCustomer = Instantiate(servedPrefab, transform.position + offset, Quaternion.identity);
 
             // crate text
-            popText = Instantiate(pointsText, transform.position + new Vector3(0, 5, 0), Quaternion.identity);
+            popText = Instantiate(pointsText, transform.position + new Vector3(0, 5, 0), Quaternion.identity, tempCustomer.transform);
 
             // golden customer 
             if(customerPointsList[0] == 500){

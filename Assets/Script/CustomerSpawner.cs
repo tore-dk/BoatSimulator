@@ -14,7 +14,7 @@ public class CustomerSpawner : MonoBehaviour
     void Start()
     {
         goldenMat = Resources.Load("RareCustomerMat", typeof(Material)) as Material;
-        InvokeRepeating("spawnCustomer", 5, 5);
+        InvokeRepeating("spawnCustomer", 0, 5);
     }
 
     // Update is called once per frame

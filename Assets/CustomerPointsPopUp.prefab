@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5814098451607983018}
   - component: {fileID: -593028899483512265}
   - component: {fileID: 4067146473216675278}
+  - component: {fileID: -8542118141224439328}
   m_Layer: 0
   m_Name: CustomerPointsPopUp
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5814098451607983019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 20, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.011104884, y: 0.012175568, z: 0.024444}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,12 +86,12 @@ TextMesh:
   m_GameObject: {fileID: 5814098451607983019}
   m_Text: My Text
   m_OffsetZ: 0
-  m_CharacterSize: 5
+  m_CharacterSize: 0.3
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 100
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7805c3c23ae0dede2bddedc6f7171d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 1
+  destroyTime: 0.5
 --- !u!114 &4067146473216675278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +123,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8589cfa54ae115381b25a5adb26812a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-8542118141224439328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814098451607983019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1426e5b431dbb3b56be2706995591316, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
