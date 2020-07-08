@@ -40,7 +40,7 @@ public class CustomerTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // update sutomers on boat text
+        // update customers on boat text
         onBoat = (capacityMGer.customersOnBoat).ToString();
         onBoatDisplayText.text = originCustomersOnBoatText + onBoat;
         // update total space available text

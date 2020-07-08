@@ -55,7 +55,7 @@ public class DropOffCollider : MonoBehaviour
                 // render golden material
                 tempCustomer.GetComponent<Renderer>().material = goldenMat;
             }
-            // text showing the amount of points
+            // text showing the amount of points gained from customer
             popText.GetComponent<TextMesh>().text = customerPointsList[0].ToString(); 
 
             // add points and remove object from list

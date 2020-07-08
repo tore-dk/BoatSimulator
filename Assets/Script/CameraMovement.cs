@@ -14,14 +14,14 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate () {
         if (Input.GetMouseButton (0)) {
             Diference=(Camera.main.ScreenToWorldPoint (Input.mousePosition))- Camera.main.transform.position;
-        if (Drag==false){
+        if (!Drag){
             Drag=true;
             Origin=Camera.main.ScreenToWorldPoint (Input.mousePosition);
         }
         } else {
             Drag=false;
         }
-        if (Drag==true){
+        if (Drag){
             Camera.main.transform.position = Origin-Diference;
         }
         //RESET CAMERA TO STARTING POSITION WITH RIGHT CLICK
